@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+.clear {
+  clear: both;
+}
+/*Begin CSS for menu */
+header {
+  /* Để header có width dài hết màn hình thì
+   dùng width:100% hoặc right: 0  */
+  width: 100%;
+  /* right: 0; */
+  background-color: #000;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+header nav {
+  display: inline-block;
+}
+header .nav-mobile {
+  display: none;
+}
+header .icon-list-menu {
+  display: none;
+}
+nav li {
+  display: inline-block;
+  position: relative;
+}
+nav li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  padding-left: 24px;
+  padding-right: 24px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+nav li:hover > a {
+  background-color: #cccccc;
+  color: #000;
+}
+nav a i {
+  font-size: 14px;
+}
+nav .sub-nav {
+  display: none;
+}
+nav li:hover .sub-nav {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.4);
+}
+nav .sub-nav a {
+  min-width: 160px;
+  color: #000;
+}
+/*End CSS for menu */
+
+/*Begin CSS for icon-search */
+/* căn icon-search phía bên phải cx có thể dùng position
+  position: relative ở header
+  header #icon-search {
+  position: absolute;
+  top:50%;
+  right:24px;
+  transform: translateY(-50%);
+}
+*/
+header #icon-search {
+  float: right;
+}
+header #icon-search i {
+  padding: 12px 24px;
+  /* Nếu padding top and bottom 12px thì k cần line height */
+  /* line-height: 46px; */
+  color: #fff;
+  font-size: 22px;
+}
+header #icon-search:hover i {
+  background-color: #f44336;
+  cursor: pointer;
+}
+/*End CSS for icon-search */
+
+/*Begin CSS for slider */
+#slider {
+  /* margin-top vì để slider không nằm dưới header */
+  margin-top: 46px;
+  position: relative;
+}
+
+#slider .content {
+  position: absolute;
+  bottom: 37px;
+  color: #fff;
+  text-align: center;
+  right: 50%;
+  transform: translateX(50%);
+}
+#slider .title-content h3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+#slider .desc-content p {
+  text-shadow: 0 0 1px #000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+/*End CSS for slider */
+
+/*Begin CSS for the-band */
+#the-band {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 64px 16px 62px 16px;
+}
+.title {
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.desc-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-style: italic;
+  opacity: 0.6;
+  text-align: center;
+}
+#items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 96px;
+}
+#items .item {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#items .title-item p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* Begin CSS for Tour */
+#tour-items {
+  background-color: #000;
+}
+#tour-items #tour {
+  color: #fff;
+  padding: 64px 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tour-items h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+#tour-items #tour-content p {
+  margin: 15px 0;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+#tour-months {
+  background-color: #fff;
+  color: #757575;
+}
+#tour-months .tour-month {
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#tour-months .tour-month .soul-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 6px 8px;
+  margin-left: 16px;
+}
+#tour-months .tour-month .quantity {
+  float: right;
+  background-color: #000;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+#buy-tickets {
+  margin: 32px -8px 0;
+}
+#buy-tickets .item {
+  float: left;
+  width: calc(100% / 3);
+  padding: 0 8px;
+}
+#buy-tickets .item img:hover {
+  opacity: 0.6;
+}
+
+#buy-tickets .item-body {
+  background-color: #fff;
+  color: #000;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#buy-tickets .item-body .places {
+  margin-top: -7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#buy-tickets .item-body .days {
+  margin-bottom: 15px;
+  opacity: 0.6;
+}
+#buy-tickets .item-body .btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  margin-top: 15px;
+}
+#buy-tickets .item-body .btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+#contact {
+  max-width: 800px;
+  padding: 64px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#contact .infor {
+  padding: 32px 0;
+}
+#contact .the-band-infor {
+  float: left;
+}
+#contact .the-band-infor i {
+  margin-right: 18px;
+}
+#contact .my-infor {
+  float: right;
+}
+#contact .my-infor input {
+  padding: 8px;
+  display: inline-block;
+  width: 100%;
+}
+td {
+  padding-bottom: 10px;
+}
+#contact .my-infor .btn-send {
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #000;
+}
+
+#contact .my-infor .btn-send:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+footer {
+  background-color: #f7f7f7;
+  padding: 64px 16px;
+  text-align: center;
+}
+footer p i {
+  color: #666666;
+}
+footer p i:hover {
+  opacity: 0.6;
+}
+footer .powered {
+  margin: 27px 0;
+  opacity: 0.6;
+}
+footer .powered a {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Modal tickets */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.open-modal {
+  display: block;
+}
+.modal .modal-container {
+  position: relative;
+  width: 900px;
+  margin: 100px auto 40px auto;
+  animation: modalFadeIn ease-out 0.8s;
+}
+
+.modal .modal-container .hide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  color: #fff;
+  font-size: 12px;
+}
+.modal .modal-container .hide:hover {
+  background-color: #ccc;
+  color: #000;
+}
+.modal-container h2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #009688;
+  color: #fff;
+  margin-bottom: 0;
+}
+.modal-container h2 i {
+  margin-right: 16px;
+}
+.modal-container .modal-body {
+  background-color: #ffffff;
+  padding: 16px;
+}
+.modal-container .modal-body p {
+  margin-bottom: 15px;
+}
+.modal-body input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+.modal-body button {
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #009688;
+  border: none;
+  margin-top: 15px;
+  padding: 16px;
+}
+.modal-body button:hover {
+  cursor: pointer;
+  background-color: #ccc;
+  color: #000;
+}
+.modal-body .feture-modal {
+  margin-top: 32px;
+  overflow: hidden;
+}
+.modal-body .feture-modal .exit {
+  color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f44336;
+}
+.modal-body .feture-modal .exit:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+.modal-body .feture-modal .exit i {
+  font-size: 12px;
+}
+.modal-body .feture-modal p a {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+@keyframes modalFadeIn {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  #items {
+    display: block;
+  }
+  #slider .content {
+    display: none;
+  }
+  #buy-tickets .item {
+    width: 100%;
+  }
+  nav li {
+    display: block;
+  }
+  header nav {
+    display: block;
+  }
+  #icon-search {
+    display: none;
+  }
+  .nav-mobile-2 li:hover a {
+    display: block;
+  }
+  header .nav-lap {
+    display: none;
+  }
+  header .nav-mobile {
+    display: inline-block;
+  }
+  header .nav-mobile-2 {
+    display: none;
+  }
+  .open {
+    display: block !important;
+  }
+  header .icon-list-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    padding: 15px 24px;
+  }
+  header .icon-list-menu:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+  }
+}
+@media (max-width: 993px) {
+  .modal .modal-container {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .modal .modal-container {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .modal .modal-container {
+    margin: 0 10px;
+    width: auto!important ;
+  }
+}
